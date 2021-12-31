@@ -1,0 +1,35 @@
+{
+  "name": "retailserver",
+  "version": "1.0.0",
+  "description": "Sample Retail App",
+  "main": "server.js",
+  "scripts": {
+    "babel-node": "babel-node --presets='@babel/preset-env'",
+    "prestart": "babel server.js --out-dir build && babel ./src --out-dir build/src",
+    "start": "node ./build/server",
+    "dev": "nodemon --exec npm run babel-node -- server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harikrishnankr/RetailServer.git"
+  },
+  "author": "harisemail94@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harikrishnankr/RetailServer/issues"
+  },
+  "homepage": "https://github.com/harikrishnankr/RetailServer#readme",
+  "dependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.16.5",
+    "nodemon": "^2.0.15"
+  }
+}
